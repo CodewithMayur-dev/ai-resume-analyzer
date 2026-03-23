@@ -1,24 +1,25 @@
-# Welcome to React Router!
+# AI Resume Analyzer
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+An AI-powered resume analyzer built with React Router v7, TailwindCSS, and Google Gemini AI. Upload your PDF resume and a job description to get an ATS score, detailed feedback, skill gap analysis, and actionable suggestions.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 📄 **PDF Upload** – Drag & drop or click to upload your resume
+- 🤖 **AI Analysis** – Powered by Google Gemini AI
+- 📊 **ATS Score** – Get a score out of 100
+- 💪 **Strengths & Weaknesses** – Detailed per-section feedback
+- 🎯 **Skill Gap Analysis** – See matching and missing skills
+- 💡 **Actionable Suggestions** – Concrete steps to improve
+- 💾 **Local Storage** – All analyses saved in your browser
 
 ## Getting Started
 
-### Installation
+### Prerequisites
 
-Install the dependencies:
+- Node.js 20+
+- A free [Google Gemini API key](https://aistudio.google.com/app/apikey)
+
+### Installation
 
 ```bash
 npm install
@@ -26,62 +27,44 @@ npm install
 
 ### Development
 
-Start the development server with HMR:
-
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Open [http://localhost:5173](http://localhost:5173).
+
+### Usage
+
+1. Visit the app and click **Analyze My Resume**
+2. Enter your Gemini API key (saved locally – never sent to any server except Google)
+3. Upload your PDF resume
+4. Paste the job description
+5. Click **Analyze Resume** and wait for AI analysis
+6. View your ATS score, strengths, weaknesses, skill gaps, and suggestions
 
 ## Building for Production
 
-Create a production build:
-
 ```bash
 npm run build
+npm run start
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+## Docker
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+docker build -t ai-resume-analyzer .
+docker run -p 3000:3000 ai-resume-analyzer
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## Tech Stack
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+- [React Router v7](https://reactrouter.com/) – Full-stack React framework
+- [TailwindCSS v4](https://tailwindcss.com/) – Styling
+- [PDF.js](https://mozilla.github.io/pdf.js/) – PDF text extraction
+- [Zustand](https://zustand-demo.pmnd.rs/) – State management
+- [Google Gemini AI](https://ai.google.dev/) – AI analysis
 
 ---
 
 Built with ❤️ using React Router.
+
