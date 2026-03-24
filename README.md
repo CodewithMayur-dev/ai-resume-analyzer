@@ -2,6 +2,12 @@
 
 An AI-powered resume analyzer built with React Router v7, TailwindCSS, and Google Gemini AI. Upload your PDF resume and a job description to get an ATS score, detailed feedback, skill gap analysis, and actionable suggestions.
 
+## 🚀 Live Demo
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/CodewithMayur-dev/ai-resume-analyzer)
+
+> **Deploy your own live instance** by clicking the button above (free tier available on Render.com) — or see [Deployment](#deployment) below for more options.
+
 ## Features
 
 - 📄 **PDF Upload** – Drag & drop or click to upload your resume
@@ -55,6 +61,19 @@ npm run start
 docker build -t ai-resume-analyzer .
 docker run -p 3000:3000 ai-resume-analyzer
 ```
+
+## Deployment
+
+The app is packaged as a Docker image, making it deployable on any container-friendly platform:
+
+| Platform | Steps |
+|---|---|
+| **Render** | Connect your GitHub repo in the [Render dashboard](https://dashboard.render.com/) → New Web Service → select this repo → Render auto-detects `render.yaml` |
+| **Railway** | [railway.app](https://railway.app/) → New Project → Deploy from GitHub repo → Railway auto-detects the `Dockerfile` |
+| **Fly.io** | `fly launch` then `fly deploy` (auto-detects `Dockerfile`) |
+| **Docker / Self-hosted** | `docker build -t ai-resume-analyzer . && docker run -p 3000:3000 ai-resume-analyzer` |
+
+After deployment, Render/Railway/Fly.io will provide a **live HTTPS URL** for your app.
 
 ## Tech Stack
 
