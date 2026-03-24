@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ai-resume-analyzer
+    runtime: docker
+    plan: free
+    envVars:
+      - key: PORT
+        value: 3000
+    healthCheckPath: /
